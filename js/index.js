@@ -32,3 +32,25 @@ const arroww = (array) => {
 }
 
 arroww(arrayFrutas);
+
+
+class producto{
+    constructor(id,precio,stock){
+        this.id = id
+        this.precio = precio
+        this.stock = stock
+    }
+    descontarDeStock(unidad){
+        if(typeof unidad != 'number'){
+            console.error("Error: El valor a descontar debe ser un número.")
+            return;
+        }
+        if((this.stock - unidad) < 0){
+            console.error("Error: La cantidad a descontar es mayor que el stock disponible.")
+            return;
+        }
+
+        this.stock -= unidad
+        return this.stock;
+    }
+}
