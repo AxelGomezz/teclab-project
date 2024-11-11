@@ -1,4 +1,4 @@
-let num = 1
+/*let num = 1
 let texto = 'este es un texto'
 
 const arrayFrutas = ['manzana','banana','naranja','mandarina','sandia']
@@ -7,7 +7,7 @@ const arrayFrutas = ['manzana','banana','naranja','mandarina','sandia']
 console.log(num,texto)
 console.table(arrayFrutas)
 
-/*
+
 ---- Conventional function ----
 
 function iterarArrayFrutas(){
@@ -20,7 +20,7 @@ function iterarArrayFrutas(){
 }
 
 iterarArrayFrutas();
-*/
+
 
 const arroww = (array) => {
     for(let i=0;i <= array.length; i++){
@@ -33,7 +33,7 @@ const arroww = (array) => {
 
 arroww(arrayFrutas);
 
-/*
+
 class producto{
     constructor(id,precio,stock){
         this.id = id
@@ -53,7 +53,7 @@ class producto{
         this.stock -= unidad
         return this.stock;
     }
-}*/
+}*
 
 const paisesDelSur = ['argentina', 'uruguay', 'brasil', 'venezuela', 'chile']
 
@@ -66,5 +66,9 @@ function agregarElemento(pais){
         paisesDelSur.push(paisNormalizado)
         console.log("El pais fue agregado exitosamente!.")
     }
-    
-}
+}*/    
+
+const botones = document.querySelectorAll('button')
+
+console.log(botones)
+
