@@ -72,3 +72,29 @@ const botones = document.querySelectorAll('button')
 
 console.log(botones)
 
+/*Funcion template string + literals.*/ 
+const productos = [
+    { imagen: '🍎', nombre: 'Manzana', precio: 1.99 },
+    { imagen: '🍌', nombre: 'Plátano', precio: 0.99 },
+    { imagen: '🍓', nombre: 'Fresa', precio: 2.99 }
+];
+
+const container = document.querySelector('div.container')
+
+function retornarCardHtml(producto){
+    return`<div class="card">
+                <div class="card-image">${producto.imagen}</div>
+                <div class="card-name">${producto.nombre}</div>
+                <div class="card-price">${producto.precio}</div>
+                <div class="card-button">
+                    <button class="button button-outline button-add" id="" title="Clic para agregar al carrito">+</button>
+                </div>
+            </div>`
+}
+
+function cargarProductos(array){
+    container.innerHTML = ""
+    array.forEach(producto => {
+        container.innerHTML += retornarCardHtml(producto)
+    });
+}
