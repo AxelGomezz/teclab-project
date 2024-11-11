@@ -33,7 +33,7 @@ const arroww = (array) => {
 
 arroww(arrayFrutas);
 
-
+/*
 class producto{
     constructor(id,precio,stock){
         this.id = id
@@ -53,4 +53,18 @@ class producto{
         this.stock -= unidad
         return this.stock;
     }
+}*/
+
+const paisesDelSur = ['argentina', 'uruguay', 'brasil', 'venezuela', 'chile']
+
+function agregarElemento(pais){
+    let paisNormalizado = pais.toLowerCase()
+    if(paisesDelSur.includes(paisNormalizado)){
+        console.error("Error: El pais ingresado ya existe en la lista.")
+        return;
+    }else{
+        paisesDelSur.push(paisNormalizado)
+        console.log("El pais fue agregado exitosamente!.")
+    }
+    
 }
